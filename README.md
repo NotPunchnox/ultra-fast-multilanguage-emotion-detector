@@ -22,7 +22,7 @@ Avant de commencer, assurez-vous d'avoir Python installé sur votre machine.
 Installez les dépendances nécessaires avec :  
 
 ```bash  
-pip3 install transformers argostranslate  
+pip3 install -r ./requirements.txt 
 ```  
 
 ---
@@ -43,13 +43,20 @@ python3 main.py
 ## 🧪 Exemple d'utilisation  
 
 ```bash
-Input: "J'adore apprendre de nouvelles choses !"  
-Output:
-    Emotions: {'label': 'curiosity', 'score': 0.5576763153076172} {'label': 'neutral', 'score': 0.3470591902732849}
-    Durée de l'opération:  0.03599667549133301 s
+Input: "Je suis super heureux"  
+Output:    
+    Langue détectée : fr
+    Texte traduit en anglais : I'm super happy.
+    Émotions détectées :
+    - joy: 0.89
+    - approval: 0.03
+    - admiration: 0.03
+    - relief: 0.02
+    - neutral: 0.02
+    Durée totale de l'opération : 0.035 secondes
 ```
 
-Testé sur `Orange pi 5 pro`, sans utilisation du NPU
+Testé sur `Orange pi 5 pro (16Go RAM)`, sans utilisation du NPU
 
 Temps de traiement moyen ( 10 tokens ): 39ms
 
